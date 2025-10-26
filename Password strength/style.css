@@ -1,0 +1,38 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+.container{
+    width:100%;
+    background-color:#282b2d;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.inputbox{
+    /* border:2px solid red; */
+    width:500px;
+    padding:10px;
+    max-width:90%;
+    position:relative;
+}
+input{
+    width:100%;
+    padding:20px;
+    background-color:transparent;
+    border:1px solid #fff;
+    outline:0;
+    color:#fff; 
+    font-size:20px;  
+    border-radius:12px;
+}
+#message{
+    position:absolute;
+    margin-left:10px;
+    bottom:-20px;
+    font-size:20px;
+    color:#fff;
+    display:none;
+}

@@ -1,0 +1,36 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+h1{
+    text-align:center;
+}
+.clock{
+    border:2px solid;
+    text-align:center;
+    width:400px;
+    margin:200px auto;
+}
+.show{
+    font-size:80px;
+    color:rgb(61, 176, 182)
+}
+button{
+    font-size:20px;
+    margin:10px;
+    padding:10px 20px;
+    border-radius:10px;
+    border:0;
+    outline:0;
+    cursor: pointer;
+}
+#stop{
+    background:rgb(218, 69, 69)
+}
+#play{
+    background:rgb(187, 118, 61)
+}
+#restart{
+    background:rgb(171, 72, 186)
+}

@@ -1,0 +1,33 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    color:black
+}
+body{
+    background-color:#250057;
+}
+.box{
+    margin:300px auto;
+    background-color:#fff;
+    /* border:2px solid rgb(5, 4, 4); */
+    padding:10px 20px;
+    width:90%;
+    border-radius:5px;
+    max-width:500px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+input{
+    width:100%;
+    padding:10px 0;
+    font-size:24px;
+    border:0;
+    outline:0;
+    background-color:#fff;
+    text-transform:capitalize;
+}
+img{
+    width:35px;
+}

@@ -1,0 +1,42 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+h1{
+    font-size:30px;
+    /* border:1px solid; */
+    margin:40px auto 0;
+    width:max-content;
+    color:#d94c3b
+}
+.box{
+    /* border:1px solid; */
+    width:max-content;
+    margin:150px auto;
+    font-size:30px;
+}
+button{
+    font-size:1.2em;
+    padding:10px 15px;
+    border:0;
+    border-radius:15px;
+    background-color:#1b1a1a;
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+button::after{
+    content:"";
+    border-radius:15px;
+    background:linear-gradient(to bottom right,orange,red);
+    width:104%;
+    height:108%;
+    position:absolute;
+    z-index:-1
+}
+button:hover{
+    box-shadow:2px 2px 20px orange,-2px -2px 20px red;
+    z-index:0;
+}
