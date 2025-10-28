@@ -1,0 +1,6 @@
+Mobiles - 320px to 600px
+
+tabs -600px to 1024px
+
+Desktops and Laptops -1024px to 1440px
+

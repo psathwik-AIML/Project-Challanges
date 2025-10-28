@@ -1,0 +1,77 @@
+* {
+  transition: background-color 0.3s, color 0.3s;
+}
+body{
+    background-color:wheat;
+    color:black;
+}
+:root{
+    /* white mode  */
+    --passages:black;
+    --button:rgb(141, 32, 32);
+    --fontsize:25px;
+    /* dark mode  */
+    --back:rgb(5, 17, 27);
+    --color:rgb(186, 194, 192);
+}
+/* dark mode codes  */
+.darkmode{
+    background-color:var(--back);
+}
+.darkmode p{
+    color:rgb(70, 187, 115);
+}
+.darkmode h1{
+    color:rgb(192, 78, 78)
+}
+.darkmode h2{
+    color:rgb(220, 122, 46)
+}
+.darkmode ul{
+    color: #cebb7f;
+    background-color:rgb(14, 60, 61);
+    box-shadow:0;
+}
+.darkmode ol{
+    color:rgb(195, 93, 180);
+}
+.darkmode button{
+    background-color:rgb(28, 86, 120);
+}
+ul{
+    list-style-type:none;
+    display:flex;
+    justify-content:space-around;
+    cursor:pointer;
+    background-color:rgb(165, 165, 102);
+    /* border:1px solid; */
+    padding:10px;
+    /* box-shadow:2px 0px 90px rgba(128, 128, 128, 0.756); */
+    font-size:var(--fontsize);
+}
+button{
+    background-color:var(--button);
+    padding:10px 20px;
+    border-radius: 10px;
+    border:0;
+}
+h1{
+    color:#8f6f07
+}
+h2{
+    color:rgb(89, 12, 81)
+}
+p{
+    color:rgb(110, 36, 6);
+}
+img{
+    position:absolute;
+    /* background-color:var(--back); */
+    width:35px;
+    right:70px;
+    top:30px;
+    cursor: pointer;
+}
+.dark{
+    background-color:#cebb7f;
+}
