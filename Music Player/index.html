@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c845a0699c.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="musicPlayer">
+            <nav>
+                <div class="circle"><i class="fa-solid fa-angle-left"></i></div>
+                <div class="circle"><i class="fa-solid fa-bars"></i></div>
+            </nav>
+            <!-- image  -->
+            <img src="thumbnail.jpg" alt="">
+            <!-- details  -->
+            <h1>Faarar</h1>
+            <p>Akull Hindi Singer</p>
+            <audio  id="song">
+                <source src="faraar song.mp3">
+            </audio>
+            <!-- my style audio  -->
+            <input type="range" id="slider">
+            <!-- controls my own  -->
+            <div class="controls">
+                <div><i class="fa-solid fa-backward"></i></div>
+                <div onclick="playPause()"><i class="fa-solid fa-play" id="play"></i></div>
+                <div><i class="fa-solid fa-forward"></i></div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
