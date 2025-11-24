@@ -1,12 +1,24 @@
-let submit=document.querySelector(".button")
-let box=document.querySelector(".box")
+// object creation for speechSynthesis
+let speech=new SpeechSynthesisUtterance("hello")
 
-
-function sub(){
-    box.classList.add("show")
+// storing all voices 
+let voices =[]
+let input =document.querySelector("textarea")
+let select =document.querySelector("select")
+// speechSynthesis.addEventListener
+document.querySelector("button").onclick=()=>{
+     speech.text=input.value
+     speechSynthesis.speak(speech)
+}
+speechSynthesis.onvoiceschanged=()=>{
+    voices=speechSynthesis.getVoices()
+    speech.voice=voices[0]
     
+    voices.forEach((each,i)=>{
+        select.options[i]=new Option(each.name,i)
+    })
 }
 
-function okay(){
-    box.classList.remove("show")
+select.onchange=()=>{
+    speech.voice=voices[select.value]
 }

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="color-scheme" content="light dark">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Converter</title>
+    <!-- font awesome  -->
+    <!-- <script src="https://kit.fontawesome.com/c845a0699c.js" crossorigin="anonymous"></script> -->
+    <!-- styles  -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #fff;
+            min-height: 100vh;
+            color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background: linear-gradient(310deg, #f7ba2c, #ea5459)
+        }
+
+        h1 {
+            margin: -300px 0 30px;
+            color: rgb(200, 255, 0);
+            text-shadow: 2px 2px 5px rgb(157, 11, 11);
+        }
+
+        textarea {
+            width: 500px;
+            height: 200px;
+            resize: none;
+            background-color: #80fdf3;
+            color: rgb(109, 6, 6);
+            font-size: 20px;
+            padding: 24px;
+            margin: 0 0 30px;
+            border: 0;
+            outline: 0;
+            border-radius: 20px;
+        }
+
+        .box {
+            border: 2px solid;
+            width: 500px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        button {
+            padding: 10px 14px;
+            border-radius: 10px;
+            border: 0;
+            outline: 0;
+        }
+
+        #select {
+            flex: 1;
+            height: 40px;
+            min-width:200px;
+            border-radius: 10px;
+            border: 0;
+            outline: 0;
+            background-color: rgb(13, 13, 37);
+            padding: 0 50px;
+            font-weight: 600;
+        }
+
+        #play {
+            background-color: rgb(130, 247, 72);
+            color: black;
+            font-weight: 600;
+        }
+
+        #pause {
+            background-color: rgb(245, 77, 77);
+            color: black;
+            font-weight: 600;
+        }
+
+        #resume {
+            background-color: rgb(247, 223, 72);
+            color: black;
+            font-weight: 600;
+        }
+
+        #cancel {
+            background-color: rgb(235, 67, 237);
+            color: black;
+            font-weight: 600;
+        }
+
+        /* i{
+            position: relative;
+            top:10px;
+            color:red;
+            border:10px solid;
+        } */
+    </style>
+
+</head>
+
+<body>
+    <h1>Text To Voice Converter</h1>
+    <textarea placeholder="Write Some Thing..."></textarea>
+    <div class="box">
+        <select id="select">
+            <!-- <i class="fa-solid fa-angle-down"></i> -->
+        </select>
+        <button id="play">Play</button>
+        <button id="pause">Pause</button>
+        <button id="resume">Resume</button>
+        <button id="cancel">Cancel</button>
+    </div>
+
+</body>
+<!-- java script  -->
+<script>
+    //  message will be there in this 
+    let speech = new SpeechSynthesisUtterance()
+    // textarea tag from html
+    let textarea=document.querySelector("textarea")
+    document.getElementById("play").onclick=function(){
+        speech.text=textarea.value
+        speechSynthesis.cancel()
+        speechSynthesis.speak(speech)
+    }
+    // array to store voices 
+    let voices=[]
+    // selected voice 
+    let selectedVoice=document.getElementById("select")
+    // onloading all voices 
+    speechSynthesis.onvoiceschanged=function(){
+        voices=speechSynthesis.getVoices()
+        speech.voice=voices[0]
+
+        // loop 
+        voices.forEach((each,i)=>{
+            selectedVoice.options[i]=new Option(each.name,i)
+        })
+    }
+    selectedVoice.onchange=()=>{
+        speech.voice=voices[selectedVoice.value]
+    }
+    document.getElementById("pause").onclick=()=>{
+        speechSynthesis.pause()
+    }
+    document.getElementById("resume").onclick=()=>{
+        speechSynthesis.resume()
+    }
+    document.getElementById("cancel").onclick=()=>{
+        speechSynthesis.cancel()
+    }
+    
+</script>
+
+</html>

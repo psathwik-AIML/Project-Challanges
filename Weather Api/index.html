@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="color-scheme" content="light dark">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- font awesome code  -->
+    <script src="https://kit.fontawesome.com/c845a0699c.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- search bar -->
+    <div class="searchBar">
+        <div class="inputBox">
+            <input type="text" placeholder="Search" id="input">
+            <i class="fa-solid fa-magnifying-glass" style="color: #f5f6f5;" id="searchIcon" onclick="show()"></i>
+        </div>
+    </div>
+    <!-- main content  -->
+    <div class="mainContent">
+        <!-- left side  -->
+        <div class="leftSide">
+            <!-- temperature box  -->
+            <div class="temperatureBox left">
+                <h6 id="cityName">City Name</h6>
+                <h5 id="cityTemp">15 &deg; C</h5>
+                <h6 id="cityDesc">Description</h6>
+                <hr>
+                <div class="box">
+                    <!-- calender box  -->
+                    <div class="calender">
+                        <i class="fa-regular fa-calendar-days"></i>
+                        <h6>Calender</h6>
+                    </div>
+                    <!-- time box  -->
+                    <div class="time">
+                        <i class="fa-solid fa-clock"></i>
+                        <h6>Time</h6>
+                    </div>
+                </div>
+            </div>
+            <!-- week box  -->
+            <div class="weekBox left">
+                <h6 id="weekTitle">Coming 5 Days</h6>
+                <div class="container">
+                    <div class="day">
+                        <div class="logo">
+                            <i class="fa-solid fa-cloud-sun"></i>
+                            <h5>7 &deg;C</h5>
+                        </div>
+                        <h5>Saturday</h5>
+                        <h5>08-04-2025</h5>
+                    </div>
+                    <div class="day">
+                        <div class="logo">
+                            <i class="fa-solid fa-cloud-sun"></i>
+                            <h5>7 &deg;C</h5>
+                        </div>
+                        <h5>Saturday</h5>
+                        <h5>08-04-2025</h5>
+                    </div>
+                    <div class="day">
+                        <div class="logo">
+                            <i class="fa-solid fa-cloud-sun"></i>
+                            <h5>7 &deg;C</h5>
+                        </div>
+                        <h5>Saturday</h5>
+                        <h5>08-04-2025</h5>
+                    </div>
+                    <div class="day">
+                        <div class="logo">
+                            <i class="fa-solid fa-cloud-sun"></i>
+                            <h5>7 &deg;C</h5>
+                        </div>
+                        <h5>Saturday</h5>
+                        <h5>08-04-2025</h5>
+                    </div>
+                    <div class="day">
+                        <div class="logo">
+                            <i class="fa-solid fa-cloud-sun"></i>
+                            <h5>7 &deg;C</h5>
+                        </div>
+                        <h5>Saturday</h5>
+                        <h5>08-04-2025</h5>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- right side  -->
+        <div class="rightSide">
+            <!-- row1  -->
+            <div class="row row1">
+                <div class="metric">
+                    <i class="fa-solid fa-water"></i>
+                    <div>
+                        <h6>pressure</h6>
+                        <h6>name</h6>
+                    </div>
+                </div>
+                <div class="metric">
+                    <i class="fa-solid fa-water"></i>
+                    <div>
+                        <h6>pressure</h6>
+                        <h6>name</h6>
+                    </div>
+                </div>
+                <div class="metric">
+                    <i class="fa-solid fa-water"></i>
+                    <div>
+                        <h6>pressure</h6>
+                        <h6>name</h6>
+                    </div>
+                </div>
+                <div class="metric">
+                    <i class="fa-solid fa-water"></i>
+                    <div>
+                        <h6>pressure</h6>
+                        <h6>name</h6>
+                    </div>
+                </div>
+            </div>
+            <!-- row2  -->
+            <div class="row row2">
+                <!-- aqi  -->
+                <div class="aqi two">
+                    <h6>Air Quality Index</h6>
+                    <div class="group">
+                        <i class="fa-solid fa-wind"></i>
+                        <div class="part">
+                            <h6>So2</h6>
+                            <h6>0</h6>
+                        </div>
+                        <div class="part">
+                            <h6>So2</h6>
+                            <h6>0</h6>
+                        </div>
+                        <div class="part">
+                            <h6>So2</h6>
+                            <h6>0</h6>
+                        </div>
+                        <div class="part">
+                            <h6>So2</h6>
+                            <h6>0</h6>
+                        </div>
+                    </div>
+                </div>
+                <!-- sun  -->
+                <div class="sun two">
+                    <h5>Sun Rise & Sun Set</h5>
+                    <div class="pair">
+                        <!-- sun rise  -->
+                        <div class="rise">
+                            <i class="remo fa-solid fa-sun" style="color: #FFD43B;"></i>
+                            <div>
+                                <h3>Sunrise</h3>
+                                <h4>6:00am</h4>
+                            </div>
+                        </div>
+                        <!-- sun set  -->
+                        <div class="set">
+                            <i class="remo fa-solid fa-moon" style="color: #c9d8f1;"></i>
+                            <div>
+                                <h3>Sunrise</h3>
+                                <h4>6:00am</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- row3  -->
+            <div class="row row3">
+                <h2>Today</h2>
+                <div class="shop">
+                    <div class="child">
+                        <h4>9:00am</h4>
+                        <i class="fa-solid fa-cloud-sun-rain" style="color: #c2b275;"></i>
+                        <h4>10&deg; C</h4>
+                    </div>
+                    <div class="child">
+                        <h4>9:00am</h4>
+                        <i class="fa-solid fa-cloud-sun-rain" style="color: #c2b275;"></i>
+                        <h4>10&deg; C</h4>
+                    </div>
+                    <div class="child">
+                        <h4>9:00am</h4>
+                        <i class="fa-solid fa-cloud-sun-rain" style="color: #c2b275;"></i>
+                        <h4>10&deg; C</h4>
+                    </div>
+                    <div class="child">
+                        <h4>9:00am</h4>
+                        <i class="fa-solid fa-cloud-sun-rain" style="color: #c2b275;"></i>
+                        <h4>10&deg; C</h4>
+                    </div>
+                    <div class="child">
+                        <h4>9:00am</h4>
+                        <i class="fa-solid fa-cloud-sun-rain" style="color: #c2b275;"></i>
+                        <h4>10&deg; C</h4>
+                    </div>
+                    <div class="child">
+                        <h4>9:00am</h4>
+                        <i class="fa-solid fa-cloud-sun-rain" style="color: #c2b275;"></i>
+                        <h4>10&deg; C</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="script.js">
+
+</script>
+</html>
