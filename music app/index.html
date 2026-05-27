@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="color-scheme" content="light dark">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music App</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- font awesome  -->
+    <script src="https://kit.fontawesome.com/c845a0699c.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="box">
+        <div class="music">
+            <!-- menu  -->
+            <div class="nav">
+                <i class="fa-solid fa-circle-chevron-left"></i>
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="circle">
+                <img src="./image.jpg">
+                <h3>Faraar</h3>
+                <h4>Akull Hindi Singer</h4>
+            </div>
+            <audio controls >
+                <source src="song.mp3">
+            </audio>
+            <input type="range" id="slider">
+            <div class="buttons">
+                <i class="fa-solid fa-backward" id="back"></i>
+                <i class="fa-solid fa-play" id="playSong" onclick="playing()"></i>
+                <i class="fa-solid fa-forward" id="front" ></i>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>
