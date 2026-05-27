@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TA Sunny - Login Form</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url('bunny bundle.jpg'); /* Your image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            position: relative;
+            color: white;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-color: rgba(0, 0, 0, 0.75); /* dark overlay */
+            z-index: -1;
+        }
+
+        .main-box {
+            padding: 50px 0;
+        }
+
+        .form-container {
+            background-color: rgba(15, 23, 42, 0.95); /* blue-black */
+            padding: 30px;
+            width: 400px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(255, 140, 0, 0.3);
+        }
+
+        label {
+            color: orange;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 90%;
+            padding: 12px;
+            margin-top: 8px;
+            margin-bottom: 20px;
+            font-size: 16px;
+            background-color: #1e293b; /* blue-gray */
+            border: 1px solid #475569;
+            border-radius: 8px;
+            color: #ffffff;
+        }
+
+        input[type="radio"] {
+            margin: 10px;
+        }
+
+        button {
+            background-color: orange;
+            color: black;
+            font-size: 18px;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #ff7300;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-box">
+        <center>
+            <div class="form-container">
+                <form onsubmit="return validateLogin()">
+                    <label>Username</label><br>
+                    <input type="text" id="username" placeholder="At least 6 characters"><br>
+
+                    <label>Password</label><br>
+                    <input type="password" id="password" placeholder="Enter password"><br>
+
+                    <label>Age</label><br>
+                    <input type="radio" name="age"> Under 18
+                    <input type="radio" name="age"> 18 or older<br><br>
+
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+        </center>
+    </div>
+
+    <script>
+        function validateLogin() {
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+
+            if (username.length >= 6 && password === "12345") {
+                window.location.href = "https://example.com"; // Replace with your real link
+                return false;
+            } else {
+                alert("Invalid credentials!");
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
