@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>COUNTER APP</title>
+        <style>
+            h1{
+    background-color:red;
+    font-size:60px;
+}
+body{
+    margin:0;
+    padding:0;
+}
+h2{
+    color:palegreen;
+    font-size:40px;
+    text-align:center;
+}
+label{
+    font-size:70px;
+    color:purple;
+    text-align:center;
+    display:block;
+}
+#b{
+    font-size:80px;
+    background-color:white;
+    margin-top:50px;
+    margin-left:350px;
+    cursor:pointer;
+    border:none;
+}
+        </style>
+    </head>
+    <body>
+        <h1 id="h1">welcome</h1>
+        <h2>ROLL A DICE</h2><br>
+        <label id="label"></label><br>
+
+        <button id="b">🎲</button>
+        <script >
+            console.log("welcome to my world");
+console.log("hunting begins from now");
+document.getElementById("h1").textContent="WELCOME TO MY CODE";
+//////////////////////////////////////////////
+let but=document.getElementById("b");
+let labells=document.getElementById("label");
+let random;
+but.onclick=function roll(){
+    random=Math.floor(Math.random()*6+1);
+    labells.textContent=random;
+}
+        </script>
+    </body>
+</html>

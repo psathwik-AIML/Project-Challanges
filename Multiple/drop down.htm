@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Drop Down </title>
+        <style>
+            body{
+                font-family:arial;
+                margin:0;
+                padding:0;
+                
+            }
+            h1{
+                text-align:center;
+                background-color:rgba(128, 128, 128, 0.265);
+                margin:0;
+                padding:30px;
+                text-shadow:3px 3px 9px rgba(127, 2, 236, 0.872);
+                font-size:60px;
+                color:aliceblue;
+            }
+            #nav{
+                background-color:rgba(135, 207, 235, 0.63);
+            }
+            #nav ul li a{
+                color:white;
+                
+            }
+            #nav ul{
+                display:flex;
+                justify-content:center;
+                gap:80px;
+                margin:0px;
+                padding:15px;
+                list-style-type:none;
+                
+            }
+            #nav ul li a{
+                text-decoration:none;
+                font-size:20px;
+                
+            }
+            #nav ul li a:hover{
+                color:rgb(3, 94, 50);
+            }
+            /* ikkada nuchi start */
+            #menu{
+                background-color:rgba(135, 207, 235, 0.332);
+                z-index:1;
+                position:absolute;
+
+
+            }
+            #dropdown:hover #menu{
+                display:block;
+
+            }
+            #dropdown ul{
+                display:none;
+
+            #dropdown ul{
+                padding:10px;]
+                display:none;
+            }
+            #dropdown{
+                position:relative;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Drop down</h1>
+        <nav id="nav">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li id="dropdown">
+                    <a href="#skills">Skills</a>
+                    <ul id="menu">
+                        <li><a href="#">java</a></li>
+                        <li><a href="#">Python</a></li>
+                        <li><a href="#">html</a></li>
+                        <li><a href="#">css</a></li>
+                        <li><a href="#">javascript</a></li>
+                        <li><a href="#">sql</a></li>
+                    </ul>
+
+                </li>
+                <li><a href="projects">Projects</a></li>
+            </ul>
+        </nav>
+    </body>
+</html>

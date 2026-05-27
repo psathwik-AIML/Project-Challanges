@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>COUNTER APP</title>
+        <style>
+            h1{
+    background-color:red;
+    font-size:60px;
+}
+body{
+    margin:0;
+    padding:0;
+}
+h3{
+    color:rgb(248, 236, 7);
+    font-size:40px;
+    text-align:center;
+    text-shadow:2px 4px 3px rgb(11, 243, 255);
+}
+label{
+    color:rgb(229, 11, 167);
+    font-size:120px;
+    font-family:helvetica;
+    text-align:center;
+    display:block;
+}
+.b{
+    background-color:rgb(41, 142, 41);
+    font-size:30px;
+    border-radius:30px;
+    padding:20px 30px;
+    margin:10px 40px;
+    text-align:center;
+    color:white;
+}
+.b:hover{
+    background-color:rgb(32, 213, 32);
+    cursor:pointer;
+}
+        </style>
+    </head>
+    <body>
+        <h1 id="h1">welcome</h1>
+        <h3>COUNTER </h3>
+        <label id="label">0</label>
+        <button  class="b" id="b1">Decrease</button>
+        <button class="b" id="b2">Reset</button>
+        <button class="b" id="b3">Increase</button>
+        <script >
+            console.log("welcome to my world");
+console.log("hunting begins from now");
+document.getElementById("h1").textContent="WELCOME TO MY CODE";
+// function ask(){
+//     document.getElementById('p').innerHTML="hello world ";
+// }
+// let n=function click_me(){
+//     document.getElementById("para").textContent="remo ani movie vundhi";
+// }
+// document.getElementById("button").onclick=n;
+//
+let count=0;
+document.getElementById("b1").onclick=function b(){
+     count--;
+    document.getElementById('label').textContent=count;
+    
+}
+document.getElementById("b2").onclick=function b(){
+    count=0;
+    document.getElementById('label').textContent=count;
+}
+document.getElementById("b3").onclick=function b(){
+     count++;
+    document.getElementById('label').textContent=count;
+    
+}
+        </script>
+    </body>
+</html>

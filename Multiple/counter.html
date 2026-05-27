@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Practice</title>
+        <style>
+            *{
+                margin:0;
+                padding:0;
+
+            }
+            body{
+                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-size:50px;
+                counter-reset:sunny;
+            }
+            h1{
+                color:teal;
+                background-color:rgb(79, 8, 75);
+                text-shadow:3px 6px 7px blue;
+                text-align:center;
+            }
+            h5{
+                text-transform:capitalize;
+                margin:40px;
+            }
+            h2{
+                font-size:50px;
+                padding:2px 4px;
+                margin:15px;
+            }
+            #s1,#s2,#s3{
+                margin:10px;
+            }
+            #s1{
+                color:orange;
+            }
+            #s2{
+                color:whitesmoke;
+            }
+            #s3{
+                color:green;
+            }
+            h5::before {
+                content:counter(sunny) '. ';
+                counter-increment:sunny;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <h1>Practice</h1>
+        <hr>
+        <h2><span id="s1">STATES</span><span id="s2">OF</span><span id="s3">INDIA</span></h2>
+        <h5>telangana</h5>
+        <h5>andhra pradesh</h5>
+        <h5>tamilnadu</h5>
+        <h5>delhi</h5>
+        <h5>kerala</h5>
+        <h5>bihar</h5>
+        <h5>rajasthan</h5>
+        <h5>karnataka</h5>
+        <h5>uttarpradesh</h5>
+        <h5>madya pradesh</h5>
+    </body>
+</html>
