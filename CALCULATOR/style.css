@@ -1,0 +1,94 @@
+body{
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+h1{
+    color:white;
+    text-align:center;
+    margin:8px;
+    font-size:3em;
+}
+.calculator{
+    background-color:hsl(0, 0%, 15%);
+    width:100%;
+    max-width:400px;
+    border-radius:10px;
+    overflow: hidden;
+}
+/* input*/
+input{
+    width:100%;
+    padding:30px;
+    height:90px;
+    background-color:hsl(0, 0%, 20%);
+    border:none;
+    color:white;
+    font-size: 50px;
+    font-weight: 600;
+    box-shadow: 0 4px 8px rgb(0, 0, 0,0.3);
+}
+/* all buttons  */
+.buttons{
+    display:grid;
+    grid-template-columns:repeat(4,auto);
+    gap:10px;
+    padding:10px;
+}
+/* for each button  */
+button{
+    width:80px;
+    height:80px;
+    border-radius:50%;
+    border:none;
+    font-size:19px;
+    font-weight:600;
+    color:white;
+    background-color:hsl(0, 2%, 30%);
+    cursor:pointer;
+}
+/* mouse on  */
+button:hover{
+    background-color: hsl(0, 3%, 40%);
+}
+/* when clicked on button  */
+button:active{
+    background-color: hsl(0, 3%, 50%);
+}
+/* all left side buttons  */
+.left{
+    background-color: hsl(36, 100%, 55%);
+}
+.left:hover{
+    background-color: hsl(36, 100%, 65%);
+}
+.left:active{
+    background-color: hsl(36, 100%, 75%);
+}
+/* responsive */
+@media (max-width:768px){
+    .calculator{
+        width:100%;
+        max-width:365px;
+    }
+    button{
+        width:60px;
+        height:60px;
+    }
+    h1{
+        font-size:2.5rem;
+    }
+    input{
+        height:50px;
+    }
+    .buttons{
+        gap:8px;
+    }
+}
