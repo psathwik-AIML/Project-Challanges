@@ -1,0 +1,119 @@
+.header {
+    /* border:2px solid red; */
+    background-color: #476ef7;
+    padding-left: 50px;
+    display: flex;
+}
+
+.header p {
+    font-size: 25px;
+}
+
+.header img {
+    margin-left: 10px;
+}
+
+/* form code  */
+.formBox {
+    /* border:2px solid red; */
+    width: 95%;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+    box-shadow: 0px 0px 10px #476ef7;
+    border-radius: 10px;
+}
+
+.input,
+#input {
+    /* border:2px solid red; */
+    width: 30% !important ;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.509);
+    border-radius: 10px;
+}
+
+#plusButton {
+    background-color: #476ef7;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: white;
+    font-size: x-large;
+}
+
+.cards {
+    /* border:2px solid black; */
+    margin: auto;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    /* border:2px solid red; */
+    height: 150px;
+    border-radius: 10px;
+    background-color: #476ef7 !important;
+}
+
+.card-body {
+    color: white !important;
+}
+
+.trackTable {
+    /* border: 2px solid black; */
+    width: 95%;
+    margin: auto;
+    overflow: hidden;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+}
+
+#first th {
+    background-color: #476ef7;
+    padding: 15px 0px;
+    color: white;
+    font-size: 25px
+}
+
+td {
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* responsive  */
+@media only screen and (max-width:768px) {
+    .header p {
+        font-size: xx-large;
+        font-weight: bold;
+    }
+
+    .formBox {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .input {
+        width: 80% !important;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.509);
+    }
+
+    #plusButton {
+        width: 80%;
+        border-radius: 10px;
+        color: white;
+    }
+    .cards{
+        flex-wrap:wrap ;
+        gap:15px;
+    }
+    .card{
+        height:150px !important;
+        width:150px !important;
+    }
+
+
+}
