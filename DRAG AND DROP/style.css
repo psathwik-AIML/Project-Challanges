@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+h1 {
+    position:absolute;
+        top:20px;
+        left:50%;
+        transform:translateX(-50%);
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    border: 5px dashed #d70c54af;
+    width: 300px;
+    min-height: 360px;
+    margin: 20px;
+}
+
+.list {
+    font-size: 30px;
+    background-color: #d70c54af;
+    margin: 20px;
+    padding: 4px 30px;
+    text-align: center;
+    text-transform: capitalize;
+    cursor: grab;
+}
